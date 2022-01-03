@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+    <div class = 'main-container'>
+        {% for item in batch %}
+            <div class="music-item">
+                
+                <a href="{{item['collectionViewUrl']}}">
+                    <img src= "{{item['artworkUrl100']}}" alt="">
+                </a>
+
+                <a href="{{item['trackViewUrl']}}">
+                    <p>{{item['trackName']}}</p>
+                </a>
+
+                <a href="{{item['artistViewUrl']}}">
+                    <p>{{item['artistName']}}</p>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

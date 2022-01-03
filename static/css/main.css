@@ -1,0 +1,23 @@
+body{
+    font-family: 'Oswald', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+
+.main-container{
+    background-color: #f3f3f3;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5%;
+}
+
+.music-item{
+    flex:1;
+    margin:5px;
+    padding:3%;
+    border: 1px solid grey;
+    background-color: white;
+}
