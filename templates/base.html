@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='css/images/pokemon_egg.ico') }}">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <a name = 'top' href="{{ url_for('index')}}">
+        <h1 class = "pokeTitle">jTunes Music</h1>
+    </a>
+    <form action="{{ url_for('getNewMusic')}}" method = "POST" >
+        <div>
+            <input type="text" name="newName" placeholder="Gorillaz">
+            <input type="submit">
+        </div>
+    </form>
+    {% block body %}
+   
+    {% endblock %}
+</body>
+<footer >
+    <a href="#top">
+        <p>Return to the top of the page</p>
+    </a>
+</footer>
+</html>
